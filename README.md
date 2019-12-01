@@ -30,10 +30,10 @@ which will still allow access to the database functions.
 This project uses "make" to build the necessary files.
 A specific target can be built by setting the target:
 
-> export TARGET=debug
+> export TARGET=debug;
 > make all
 
-> export TARGET=release
+> export TARGET=release;
 > make all
 
 To build the samples:
