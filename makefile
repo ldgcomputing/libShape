@@ -46,13 +46,16 @@ else
 	TARGET_FILE = libShape.a
 endif
 
-all: ${TARGET_FILE}
+all : ${TARGET_FILE}
+
+samples : ${TARGET_FILE} ExamineShapeFile
 
 clean:
 	rm -f ${TARGET_FILE} ${BIN}/* 
 
-cleanall:
-	rm -rf bin libShape.a libbShaped.a 
+cleanall :
+	rm -rf bin libShape.a libbShaped.a
+	rm -f Samples/ExamineShapeFile/examineShapeFile
 	mkdir bin
 	mkdir bin/debug
 	mkdir bin/release
@@ -69,3 +72,6 @@ ${BIN}/libShapeDB.o : Include/libShapeDB.hpp Src/libShapeDB.cpp
 
 ${BIN}/libShapeFile.o : Include/libShapeFile.hpp Src/libShapeFile.cpp
 	${CC} -c ${INCLUDES} ${CC_OPTS} -o ${BIN}/libShapeFile.o Src/libShapeFile.cpp
+
+ExamineShapeFile : ${TARGET_FILE} Samples/ExamineShapeFile/main.cpp
+	${CC} ${INCLUDES} ${CC_OPTS} -o Samples/ExamineShapeFile/examineShapeFile Samples/ExamineShapeFile/main.cpp ${TARGET_FILE}

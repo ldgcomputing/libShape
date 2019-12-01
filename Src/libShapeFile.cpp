@@ -482,6 +482,10 @@ namespace libShape {
 		return(*this);
 	}
 
+	ShapePoint::~ShapePoint( ) {
+
+	}
+
 	ShapePolyline::ShapePolyline(const int recordNum, const BYTE *pBuffer, const size_t bufSize) : AbstractShape( recordNum, SHAPE_POLYLINE) {
 
 		// Must be at least 40 bytes

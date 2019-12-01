@@ -25,3 +25,18 @@ Unsupported shape types will be returned as
 	libShape::ShapeInvalid
 
 which will still allow access to the database functions.
+
+# Building
+This project uses "make" to build the necessary files.
+A specific target can be built by setting the target:
+
+> export TARGET=debug
+> make all
+
+> export TARGET=release
+> make all
+
+To build the samples:
+
+> make samples
+

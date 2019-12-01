@@ -1,0 +1,21 @@
+
+#
+# MAC OS files
+#
+
+.DS_Store
+
+#
+# Binary files
+#
+
+**/bin
+
+#
+# Built files
+#
+
+libShape.a
+libShaped.a
+Samples/ExamineShapeFile/examineShapeFile
+
